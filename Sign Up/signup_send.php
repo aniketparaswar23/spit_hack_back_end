@@ -30,7 +30,33 @@ function insertFormData($role, $name, $email, $mobile, $age, $password, $confirm
     $check_stmt->execute();
     $result = $check_stmt->get_result();
     if ($result->num_rows > 0) {
-        echo "User with mobile number $mobile already exists";
+        echo "<style>
+        .alert-box {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px auto;
+            width: 50%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .alert-box h2 {
+            margin-top: 0;
+        }
+    </style>";
+    echo "<div class='alert-box'>
+        <h2>User with mobile number $mobile already exists</h2>
+        <p>Please wait while you are being redirected...</p>
+    </div>";
+    echo "<script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000); // Redirect after 3 seconds
+    </script>";
+    ;
         $check_stmt->close();
         $conn->close();
         return;
@@ -45,9 +71,36 @@ function insertFormData($role, $name, $email, $mobile, $age, $password, $confirm
 
     // Execute statement
     if ($insert_stmt->execute() === TRUE) {
-        echo "New record inserted successfully";
+        echo "<style>
+    .success-alert-box {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 4px;
+        padding: 15px;
+        margin: 20px auto;
+        width: 50%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .success-alert-box h2 {
+        margin-top: 0;
+    }
+</style>";
+echo "<div class='success-alert-box'>
+    <h2>New record inserted successfully</h2>
+    <p>Please wait while you are being redirected...</p>
+</div>";
+echo "<script>
+    setTimeout(function() {
+        window.location.href = 'index.html';
+    }, 3000); // Redirect after 3 seconds
+</script>";
+
+
     } else {
-        echo "Error: " . $insert_stmt->error;
+        echo "<script>alert('Error: " . htmlspecialchars($insert_stmt->error) . "');window.location.href = 'index.html';</script>";
     }
 
     // Close statement and connection
