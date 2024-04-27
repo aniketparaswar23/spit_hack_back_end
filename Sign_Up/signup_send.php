@@ -94,7 +94,7 @@ echo "<div class='success-alert-box'>
 </div>";
 echo "<script>
     setTimeout(function() {
-        window.location.href = 'index.html';
+        window.location.href = 'http://localhost/spit_hack_back_end/Sign_In/index.html';
     }, 3000); // Redirect after 3 seconds
 </script>";
 

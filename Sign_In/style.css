@@ -1,0 +1,60 @@
+/*** login Start ***/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.auth-wrapper {
+    width: 100%;
+    max-width: 400px; /* Control the width of the form container */
+    background: #FFF5E0; /* Light cream background color */
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 8px; /* Rounded corners for the outer box */
+    padding: 20px; /* Ensure there's padding around the content */
+    border: 1px solid #E0D5B7; /* subtle border color */
+}
+
+.auth-content {
+    padding: 20px;
+    background: #ffffff; /* Keep the inner content background white for contrast */
+    border-radius: 5px; /* Slightly rounded corners inside the box */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: none;
+}

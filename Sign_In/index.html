@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <form class="auth-form" action="signin_send.php" method="POST">
+                <h3 class="text-center mb-4">Login</h3>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+                <p class="text-center">Don't have an account? <a href="http://localhost/spit_hack_back_end/Sign_Up/index.html">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
