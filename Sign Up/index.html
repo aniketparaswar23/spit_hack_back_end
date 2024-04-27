@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <form class="auth-form" action="signup_send.php" method="POST"> <!-- Added action and method attributes -->
+                <h3 class="text-center mb-4">Sign Up</h3>
+                
+                <!-- Toggle Switch for Role Selection -->
+                <div class="toggle-switch">
+                    <input type="radio" name="role" id="farmer" value="farmer" checked>
+                    <label for="farmer">Farmer</label>
+                    <input type="radio" name="role" id="buyer" value="buyer">
+                    <label for="buyer">Buyer</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" name="mobile" placeholder="Mobile" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="age" placeholder="Age" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="location" placeholder="Location" required> <!-- Added name attribute -->
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
